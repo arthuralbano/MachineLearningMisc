@@ -93,7 +93,7 @@ plt.title("Linear regression on data with non-constant variance")
 ## Quantile regression for the median, 0.5th quantile
 import pandas as pd 
 data = pd.DataFrame(data = np.hstack([x_, y_]), columns = ["x", "y"])
-print data.head()
+print(data.head())
 
 import statsmodels.formula.api as smf
 
@@ -105,7 +105,7 @@ print(res.summary())
 
 ## Build the model for other quantiles
 quantiles = np.arange(0.1,1,0.1)
-print quantiles 
+print(quantiles)
 models = []
 params = []
 
@@ -118,7 +118,7 @@ for qt in quantiles:
 
 params = pd.DataFrame(data = params, columns = ['qt','intercept','x_coef','cf_lower_bound','cf_upper_bound'])
 
-print params
+print(params)
 
 ## Let us plot the 10th, 50th and 90th percentile
 plt.figure(5)
